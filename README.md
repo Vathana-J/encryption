@@ -4,9 +4,10 @@
 #AES Algorithm
 
 AES is an iterated symmetric block cipher, which means that:
-  • AES works by repeating the same defined steps multiple times.
-  • AES is a secret key encryption algorithm.
-  • AES operates on a fixed number of bytes
+
+• AES works by repeating the same defined steps multiple times.
+• AES is a secret key encryption algorithm.
+• AES operates on a fixed number of bytes
   
 AES as well as most encryption algorithms is reversible. This means that almost the same steps are performed to
 complete both encryption and decryption in reverse order. The AES algorithm operates on bytes, which makes it simpler to
@@ -23,11 +24,6 @@ SHIFT ROW
 MIX COLUMN
 
 An iteration of the above steps is called a round. The amount of rounds of the algorithm depends on the key size.
-Key Size    Block Size  Rounds
-(bytes)     (bytes)
-16          16          10
-24          16          12
-32          16          14
 
 The only exception being that in the last round the Mix Column step is not performed, to make the algorithm reversible
 during decryption.
