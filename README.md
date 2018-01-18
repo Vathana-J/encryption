@@ -1,6 +1,8 @@
 # encryption
 # AES - Advanced Encryption Standard
 
+My final year project was done with AES. Though I did it using C-programming at that time, I just coded it using Python now to fill in the GIT with some nice programming :)
+
 #AES Algorithm
 
 AES is an iterated symmetric block cipher, which means that:
