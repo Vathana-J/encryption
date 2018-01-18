@@ -13,7 +13,7 @@ class AES_methods(object):
         AES_methods.num_of_roundkeys = self.getNumberOfRounds(key)
         AES_methods.RoundKey.append(self.key_word) #First RoundKey is the Key itself
 
-    @classmethod
+
     def generate_roundKeys(self):
         # Assign the number of rounds, based on the Key length
         #cls.num_of_roundkeys = cls.getNumberOfRounds(cls.key)
@@ -37,7 +37,6 @@ class AES_methods(object):
 
         return
 
-    @classmethod
     def getNumberOfRounds(self,Key):
     # The amount of rounds of the algorithm depends on the key size. In this function, we set the number of rounds
     # based on the key size.
