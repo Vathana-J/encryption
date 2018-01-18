@@ -1,8 +1,8 @@
 import numpy as np
 from AES_CONSTANTS import constants
 class AES_methods(object):
-    num_of_roundkeys = 0
-    RoundKey = []
+    num_of_roundkeys = 0 #variable to hold the number of rounds to be performed, based on the key length
+    RoundKey = [] #To hold the Roundkeys generated for manipulation in each round
 
     def __init__(self, key):
         self.key = key
@@ -10,12 +10,6 @@ class AES_methods(object):
         key_hex = [hex(n) for n in key_ascii]
         self.key_word = [[key_hex[n], key_hex[n + 1], key_hex[n + 2], key_hex[n + 3]]
                          for n in range(0, len(key_hex), 4)]
-
-        #self.text = text
-        #text_ascii = [ord(x) for x in list(text)]
-        #text_hex = [hex(n) for n in text_ascii]
-        #self.text_words = [[text_hex[n], text_hex[n + 1], text_hex[n + 2], text_hex[n + 3]]
-        #                   for n in range(0, len(text_hex), 4)]
         AES_methods.num_of_roundkeys = self.getNumberOfRounds(key)
         AES_methods.RoundKey.append(self.key_word) #First RoundKey is the Key itself
 
